@@ -1,0 +1,43 @@
+.phish-detect-verified{
+    position: fixed;
+    top: -300px;
+    /* opacity: 0.5; */
+    right: 10px;
+    z-index: 200000;
+    max-width: 200px;
+    background: #616181;
+    border-radius: 3px;
+    display: flex;
+    transition: all 0.6s ease-in-out;
+}
+.phish-detect-verified.animate{
+    top:10px;
+    opacity: 1;
+}
+.phish-detect-verified__col{
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.phish-detect-verified__col_left{
+    width: 30%;
+}
+
+.phish-detect__verified-illustration{
+    width:40px;
+}
+
+.phish-detect-verified__col_right{
+    text-align: left;
+    align-items: center;
+    width:70%;
+}
+.phish-detect-verified__msg{
+    font-size: 10px;
+    color: #FFF;
+    letter-spacing: 2px;
+    margin: 15px 0px;
+}

@@ -1,0 +1,30 @@
+{
+   "background": {
+      "service_worker": "workers/background.js"
+   },
+   "action": {
+      "default_popup": "html/index.html",
+      "default_title": "<change me!!>"
+    },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "css/notice.css", "css/verified.css" ],
+      "js": [ "js/firebase/firebase-app.js", "js/firebase/firebase-firestore.js", "js/app.js" ],
+      "match_about_blank": false,
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Protect yourself and your dear ones from Phishing attacks, losing money and identity",
+   "icons": {
+      "128": "/images/fishing.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0nS6llwFRJEdNAljAqgyNyc18Ilxgk2FLABGQ79LIvOQgkQIFsHfBnPB0dscv/N8JlEA5OmFmXMEGAo0lIvhHvpY35j5Svq6EcqTGI4l0+TkKdBcta18E6+qB/QNRNPOoZTzsnYK01WA7YnFRqk3o0Cf/WMT/Hl9sytJtKcxrW+S2EoUtCTLF2cAG3/TyXGNYM++JMedP/rAcO9lvV8VKFIuFvxWkfROMfQ9DJ0Lc7YGagXBdMwNNZ0osw96+qhg76P4oJPDD23mytnGdRx/2KfNSLLkADBudV1RTDnqy3AgpgYpiwojRoFZwjoMBUfgnj4XBrrucW3uf9PtIgvuOwIDAQAB",
+   "manifest_version": 3,
+   "name": "Phish Alerts",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.3",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "html/notice.html", "html/verified.html", "images/*" ]
+   } ]
+}

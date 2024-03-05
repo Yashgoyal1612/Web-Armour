@@ -1,0 +1,35 @@
+<!--
+The popup for the error message user sees at the top of Document
+ -->
+<div class="phish-detect-notice" id="notice-tpl">
+    <button class="phish-detect-notice__close"
+        id="js-phishdetector-close">X</button>
+    <div class="phish-detect__col">
+        <h6 class="phish-detect-notice__head">
+            Malicious website ahead!
+        </h6>
+        <p class="phish-detect-notice__msg">
+            The current website seems to be a phishing website. <br />
+            Attackers might try to trick you and steal your credentials. Proceed
+            at your own risk.
+        </p>
+        <br />
+        <br />
+        <p class="phish-detect-notice__msg phish-detect-notice__msg_whitelist">
+            If you are the owner of this website and wish to whitelist this <a
+                target"_blank"
+                href="https://phishalerts.com/whitelist-your-organization/">contact
+                us</a>.
+        </p>
+    </div>
+
+    <div class="phish-detect__col phish-detect__col_right">
+        <img src="./images/phishing_illustration.jpg"
+            class="phish-detect__illustration" id="js-phishing-illustration" />
+    </div>
+
+    <p class="phish-detect-notice__powered">
+        Powered by <a target="_blank"
+            href="https://phishalerts.com">PhishAlerts</a>
+    </p>
+</div>

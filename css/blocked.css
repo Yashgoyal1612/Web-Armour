@@ -1,0 +1,22 @@
+/*
+Code for Page Blocked html file
+- It has the overrides that are not stored in notice.css
+- notice.css is applicable to Popup and the Page, this file is applied only to Page file
+*/
+.phish-detect-notice-blocked{
+    display: flex;
+    margin:0;
+}
+
+.phish-detect-notice__back{
+    border: none;
+    padding: 10px;
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+.phish-detect-notice-blocked .phish-detect-notice__close{
+    display: none;
+}
