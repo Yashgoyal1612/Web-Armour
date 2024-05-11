@@ -8,7 +8,7 @@ The Web Armour project aims to make the internet safer by creating a strong defe
 
 ## Installation
 
-### Download/clone the repo:
+### Download/clone the repo: https://github.com/Yashgoyal1612/Web-Armour.git
 ### In chrome, open up the extensions page by going to chrome://extensions.
 ### Check "Developer mode" then click on "Load unpacked extension". Click the Web Armour folder. This should install the extension. You can disable Developer mode after it is installed.
 
