@@ -19,7 +19,7 @@
    },
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0nS6llwFRJEdNAljAqgyNyc18Ilxgk2FLABGQ79LIvOQgkQIFsHfBnPB0dscv/N8JlEA5OmFmXMEGAo0lIvhHvpY35j5Svq6EcqTGI4l0+TkKdBcta18E6+qB/QNRNPOoZTzsnYK01WA7YnFRqk3o0Cf/WMT/Hl9sytJtKcxrW+S2EoUtCTLF2cAG3/TyXGNYM++JMedP/rAcO9lvV8VKFIuFvxWkfROMfQ9DJ0Lc7YGagXBdMwNNZ0osw96+qhg76P4oJPDD23mytnGdRx/2KfNSLLkADBudV1RTDnqy3AgpgYpiwojRoFZwjoMBUfgnj4XBrrucW3uf9PtIgvuOwIDAQAB",
    "manifest_version": 3,
-   "name": "Phish Alerts",
+   "name": "Web Armour",
    "permissions": [ "storage" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "0.0.3",
@@ -28,3 +28,4 @@
       "resources": [ "html/notice.html", "html/verified.html", "images/*" ]
    } ]
 }
+   

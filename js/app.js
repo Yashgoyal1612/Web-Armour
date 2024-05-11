@@ -1,21 +1,30 @@
 const env = {
+    // Clone Firebase --------------------------------------------------------------->
     apiKey: "AIzaSyAZ_iL-1pKXUdRBHN0FCEUs6gyF_sXf6Lg",
     authDomain: "phisalerts.firebaseapp.com",
     projectId: "phisalerts",
     storageBucket: "phisalerts.appspot.com",
     messagingSenderId: "140449946242",
     appId: "1:140449946242:web:4cce32ce5c0f413350f29b",
+    // Personal Firebase --------------------------------------------------------->
+    // apiKey: "AIzaSyDvlKc4xdzaAHuyCH2amsCPMx6w-Fwy9ek",
+    // authDomain: "web-armour.firebaseapp.com",
+    // projectId: "web-armour",
+    // storageBucket: "web-armour.appspot.com",
+    // messagingSenderId: "913995731463",
+    // appId: "1:913995731463:web:cca03f8987dce03277d0a2",
     parent_collection: "production",
     suppressed_url_expiry_hours: 4
-};
+};`q`
 const PHISHING_CONFIG = {
-    CHECK_FORM: true,
+    CHECK_FORM: true,   
     WARN_TYPE: {
         PUNNY_URL: 1,
         PHISY_CONTENT: 2,
         BLACKLISTED_URL: 3
     },
-    HIDE_VERIFICATION_DURATION: 5e3
+    // duration for hiding the verification (or the verified badge) is set to 5 seconds.
+    HIDE_VERIFICATION_DURATION: 5e3      
 };
 const firebaseConfig = {
         apiKey: env.apiKey,
@@ -25,6 +34,7 @@ const firebaseConfig = {
         messagingSenderId: env.messagingSenderId,
         appId: env.appId
     },
+    // Responsible for managing data-related operations, particular ly interacting with Firebase.
     DataService = {
         app: null,
         events: [],
@@ -42,6 +52,7 @@ const firebaseConfig = {
                 scope: a
             });
         },
+        // Saving suppressed URLs to the local storage using the Chrome Storage API
         saveSuppressedUrls: async function (t) {
             console.log("Save Supp Urls called");
             const e = await chrome.storage.local.get("static_data");
@@ -53,6 +64,8 @@ const firebaseConfig = {
             var t = await chrome.storage.local.get("static_data");
             return void 0 !== t.static_data ? t.static_data.suppressedUrls : [];
         },
+
+        // Responsible for retrieving static data from Chrome's local storage.
         getStaticData: async function (n = false) {
             var i = this;
             return new Promise((a, t) => {
@@ -126,6 +139,8 @@ const firebaseConfig = {
     //Function Checks - Final Score 
     
 const Util = {
+
+    // Create a unique identifier string that can be used to uniquely identify objects or entities in a system.
     getGuid: function () {
         return Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1);
     },
