@@ -1,6 +1,6 @@
 # Web Armour
 
-### This is a browser extension to help alert and warn users if they open up a potential phishing email or browses some malicious url.
+### This is a browser extension designed to alert and warn users if they open a potential phishing email or browse a malicious URL.
 
 ## Objective 
 
