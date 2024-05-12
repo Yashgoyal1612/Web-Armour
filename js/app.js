@@ -15,7 +15,7 @@ const env = {
     // appId: "1:913995731463:web:cca03f8987dce03277d0a2",
     parent_collection: "production",
     suppressed_url_expiry_hours: 4
-};`q`
+};
 const PHISHING_CONFIG = {
     CHECK_FORM: true,   
     WARN_TYPE: {
@@ -34,7 +34,7 @@ const firebaseConfig = {
         messagingSenderId: env.messagingSenderId,
         appId: env.appId
     },
-    // Responsible for managing data-related operations, particular ly interacting with Firebase.
+    // Responsible for managing data-related operations, particularly interacting with Firebase.
     DataService = {
         app: null,
         events: [],
@@ -52,7 +52,7 @@ const firebaseConfig = {
                 scope: a
             });
         },
-        // Saving suppressed URLs to the local storage using the Chrome Storage API
+        // Saving suppressed URLs to the local storage using the Chrome Storage API - (key set if not present)
         saveSuppressedUrls: async function (t) {
             console.log("Save Supp Urls called");
             const e = await chrome.storage.local.get("static_data");
@@ -144,28 +144,40 @@ const Util = {
     getGuid: function () {
         return Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + "-" + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1) + Math.floor(65536 * (1 + Math.random())).toString(16).substring(1);
     },
+
+    // like chrome settings
     isSystemUrl: function (t) {
         for (var e = [/^chrome-extension:/, /^chrome:/], n = 0; n < e.length; n++)
             if (e[n].test(t)) return true;
         return false;
     },
+
+    // domain like .in , .com
     getTopDomain: function () {
         for (var t, e = "weird_get_top_level_domain=cookie", n = document.location.hostname.split("."), r = n.length - 1; 0 <= r; r--)
             if (t = n.slice(r).join("."), document.cookie = e + ";domain=." + t + ";", -1 < document.cookie.indexOf(e)) return document.cookie = e.split("=")[0] + "=;domain=." + t + ";expires=Thu, 01 Jan 1970 00:00:01 GMT;", t;
     },
+
+    // \https://google.com - It will extract google
     extractHostname: function (t) {
         t = -1 < t.indexOf("://") ? t.split("/")[2] : t.split("/")[0];
         return t = (t = t.split(":")[0]).split("?")[0];
     },
+
+    // extract like www. 
     extractDomain: function (t) {
         t = -1 < t.indexOf("://") ? t.split("/")[2] : t.split("/")[0];
         return t = (t = (t = -1 < t.indexOf("www.") ? t.split("www.")[1] : t).split(":")[0]).split("?")[0];
     },
+
+    // URl is valid or not
     validUrl: function (t) {
         var e = new RegExp("^(https?:\\/\\/)?((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|((\\d{1,3}\\.){3}\\d{1,3}))(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*(\\?[;&a-z\\d%_.~+=-]*)?(\\#[-a-z\\d_]*)?$", "i"),
             n = this.isSystemUrl(t);
         return !!e.test(t) && !n;
     },
+
+
     isDomainIDN: function (t) {
         return t.startsWith("xn--") || t.startsWith("www.xn--") || isUnicode(t);
     },
@@ -177,14 +189,21 @@ const Util = {
             if (e[n].test(t)) return true;
         return false;
     },
+
+    // ex emoji 
+
     isUnicode: function (t) {
         for (var e = 0, n = t.length; e < n; e++)
             if (255 < t.charCodeAt(e)) return true;
         return false;
     },
+
+    // length check 
     getCleanUrl: function (t) {
         return t && 0 < t.length ? this.extractDomain(t) : t;
     },
+
+    // 
     isUrlPunny: function (t) {
         if (!this.validUrl(t)) return false;
         if (t.includes("xn--", 0)) return true;
