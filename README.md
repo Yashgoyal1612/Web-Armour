@@ -16,3 +16,9 @@ The Web Armour project aims to make the internet safer by creating a strong defe
 ### Warning
 
 ![Warning](https://github.com/Yashgoyal1612/Web-Armour/assets/80318226/cb457f55-18cb-41db-ba75-363461ffe87f)
+
+#### Warning Links
+https://wkazisan.github.io/facebook-login-page/
+https://www.desidime.com/deals/amazon-shopping-75rs-voucher-free-with-visa-platinum-card
+https://career8.successfactors.com/career?company=ANSYSHRIS&site=&lang=en_US&requestParams=Vwtn41zhUq7Ayf6qDzxyYmBxlBp42m1QW0rDQBS9toa2pqhF8M8tlFSqtfihRagN%2bMJQQfyIt8nY%0aTBkn6cyNrQiuSBchrkA%2f3YD44R6cVsFGHLgzw7mPc859%2bARLK6gM8AarKXFR7aCODjGxCm9Pz6uX%0aL3nItWFBxBi2MaBYuVCiSDEdxSIcJzu7MDnlUdHcyyZsgjIKpmhPMSQWpgpWLg6m0wXKftUjxWV%2f%0a%2b%2fH17P1j7W4%2fBzBOTNscwTyplJlHc2LpEO4h%2f40DQTEQnElyw1m8OIh7en3EegSVABVjyjeIr9jQ%0a55lCq1Z3NmoEto4DjqKVJOI2k79CoQ2zbdpPeMIElxkB1jFFxhAsBrFSTCDxWPpZLXbDaTaa9c2t%0auuOYQq5dSUxJFF3N1H9chSC%2bTlD%2b6sgRlFpH3rnXOXW9P%2f8fd1LPTlqamEXjhQdTRWZzkwVnyJj0%0au974C0x2hzU%3d&login_ns=register&career_ns=job%5fapplication&career_job_req_id=14051&jobPipeline=Other&clientId=jobs2web&_s.crb=5G8aBZzJw%2f3z1cEQr3uGB0lFlucrnC0gqQ%2fBScJH%2bts%3d
+https://careers.jio.com/frmRegister.aspx
